@@ -1,10 +1,10 @@
 package com.renatoarg.androidjetpackroom
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.renatoarg.androidjetpackroom.room.User
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), MyAdapter.MyDeleteListener {
         mainViewModel.deleteUser(user)
     }
     private fun observeList() { mainViewModel.getAllUsers().observe(this, Observer { value ->
-            adapter.setUsers(value!!.toList()) })
+            adapter.setUsers(value as ArrayList<User>)})
     }
 
 }

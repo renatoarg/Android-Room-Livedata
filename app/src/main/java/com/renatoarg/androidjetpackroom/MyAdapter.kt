@@ -1,7 +1,7 @@
 package com.renatoarg.androidjetpackroom
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +22,7 @@ class MyAdapter(private var context: Context) : RecyclerView.Adapter<MyAdapter.V
     }
 
     private val mInflater: LayoutInflater = LayoutInflater.from(context)
-    private lateinit var mUsers: List<User>
+    private var mUsers = ArrayList<User>()
     private var myDeleteListener: MyDeleteListener = context as MyDeleteListener
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
@@ -47,7 +47,7 @@ class MyAdapter(private var context: Context) : RecyclerView.Adapter<MyAdapter.V
 
     }
 
-    fun setUsers(users: List<User>) {
+    fun setUsers(users: ArrayList<User>) {
         mUsers = users
         notifyDataSetChanged()
     }

@@ -1,6 +1,6 @@
 package com.renatoarg.androidjetpackroom
 
-import android.arch.lifecycle.*
+import androidx.lifecycle.*
 import com.renatoarg.androidjetpackroom.room.User
 
 class MainViewModel : ViewModel(), LifecycleObserver {

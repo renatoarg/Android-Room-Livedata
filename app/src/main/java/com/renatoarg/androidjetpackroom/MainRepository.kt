@@ -1,6 +1,6 @@
 package com.renatoarg.androidjetpackroom
 
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LiveData
 import com.renatoarg.androidjetpackroom.room.AppDatabase
 import com.renatoarg.androidjetpackroom.room.User
 import com.renatoarg.androidjetpackroom.room.UserDao
